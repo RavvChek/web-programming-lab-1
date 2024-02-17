@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=MuseoModerno&display=swap');
+
+html {
+    font-family: 'MuseoModerno', cursive;
+    background-color: #5cdb95;
+    margin: 0;
+    border: black;
+}
+
+#head {
+    font-family: cursive;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #edf5e1;
+}
+#page {
+    width: 95%;
+    margin: auto;
+    border-spacing: 8px;
+}
+.end {
+    padding: 8px;
+    text-align:center;
+    font-size: 20px;
+    color: black;
+    background-color: #edf5e1;
+}
+
+#graph {
+    vertical-align: top;
+    width: 30%;
+}
+
+#table {
+    vertical-align: top;
+    position: relative;
+    width: 65%;
+}
+
+#coordinates {
+    vertical-align: top;
+    width: 30%;
+}
+
+
+
+
