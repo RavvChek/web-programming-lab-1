@@ -1,60 +1,38 @@
-# jQuery
+# 📍 Web-приложение для валидации координат и визуализации результата
 
-> jQuery is a fast, small, and feature-rich JavaScript library.
+## 🔎 Описание
 
-For information on how to get started and how to use jQuery, please see [jQuery's documentation](https://api.jquery.com/).
-For source files and issues, please visit the [jQuery repo](https://github.com/jquery/jquery).
+Это веб-приложение позволяет пользователю ввести координаты X, Y и значение R, отправить данные на сервер и увидеть, попадает ли точка в заданную область. Приложение визуализирует результаты в виде таблицы и графика на координатной плоскости.
 
-If upgrading, please see the [blog post for 3.7.1](https://blog.jquery.com/2023/08/28/jquery-3-7-1-released-reliable-table-row-dimensions/). This includes notable differences from the previous version and a more readable changelog.
+## 💻 Используемые технологии
 
-## Including jQuery
+### Frontend:
+- **HTML** – разметка страницы
+- **CSS** – стилизация элементов и адаптивность интерфейса
+- **JavaScript** – клиентская валидация, работа с DOM, отрисовка графика
 
-Below are some of the most common ways to include jQuery.
+### Backend:
+- **PHP** – обработка данных, логика проверки попадания в область, хранение истории
 
-### Browser
+### Прочее:
+- **Сессии в PHP** – для хранения истории результатов
+- **Canvas/SVG** – визуализация координатной плоскости и точек (если используется)
 
-#### Script tag
+## 📌 Цель проекта
 
-```html
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-```
+Проект разработан в рамках учебного задания, но может служить демонстрацией навыков:
 
-#### Webpack / Browserify / Babel
+- Разработка клиент-серверных приложений
+- Работа с формами и валидацией
+- Создание динамического UI
+- Использование PHP без фреймворков
 
-There are several ways to use [Webpack](https://webpack.js.org/), [Browserify](http://browserify.org/) or [Babel](https://babeljs.io/). For more information on using these tools, please refer to the corresponding project's documentation. In the script, including jQuery will usually look like this:
+## 🧩 Функциональность
 
-```js
-import $ from "jquery";
-```
+- Ввод координат и выбор значения R
+- Проверка корректности данных на клиенте
+- Отправка на сервер и логика обработки
+- Визуализация результатов на графике
+- Таблица с историей запросов
 
-If you need to use jQuery in a file that's not an ECMAScript module, you can use the CommonJS syntax:
-
-```js
-var $ = require( "jquery" );
-```
-
-#### AMD (Asynchronous Module Definition)
-
-AMD is a module format built for the browser. For more information, we recommend [require.js' documentation](https://requirejs.org/docs/whyamd.html).
-
-```js
-define( [ "jquery" ], function( $ ) {
-
-} );
-```
-
-### Node
-
-To include jQuery in [Node](https://nodejs.org/), first install with npm.
-
-```sh
-npm install jquery
-```
-
-For jQuery to work in Node, a window with a document is required. Since no such window exists natively in Node, one can be mocked by tools such as [jsdom](https://github.com/jsdom/jsdom). This can be useful for testing purposes.
-
-```js
-const { JSDOM } = require( "jsdom" );
-const { window } = new JSDOM( "" );
-const $ = require( "jquery" )( window );
-```
+Баянов Равиль - @ravvcheck
